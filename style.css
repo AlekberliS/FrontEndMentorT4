@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk");
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+body {
+     justify-content: center;
+    align-items: center; 
+    display: flex;
+    position: relative;
+    height: 100vh;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+}
+.bg-img {
+    position: absolute;
+ width: 37%;
+ height: 110%;
+ left: 0;
+}
+.bg-imgm {
+    display: none;
+}
+.container {
+    position: relative;
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+    height: 800px;
+    display: flex;
+}
+.card-display {
+    flex: 0 1 600px;
+    position: relative;
+    color:hsl(0, 0%, 100%) ;
+    flex:1 0 auto;
+}
+.card-details {
+    position: relative;
+    flex: 0 1 45%;
+}
+.card-back, .card-front {
+    position: absolute;
+    width: fit-content;
+
+}
+.card-front-img, .card-back-img {
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+}
+.card-back{left: 280px; bottom: 130px;}
+.card-front{left: 210px; top: 130px;}
+
+.card-front-logo, .cardn, .cardow, .cardmonth, .cardday, .divider, .cardcvc{
+    position: absolute;
+} 
+
+.card-front-logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+.cardn {
+    position: absolute;
+    font-size: 20px;
+    top: 150px;
+    left: 40px;
+    letter-spacing: 5px;
+
+}
+.cardow {
+    left: 40px;
+    top: 200px;
+    letter-spacing: 2px;
+}
+.cardmonth {
+    top: 200px;
+    left: 360px;
+    letter-spacing: 5px;
+}
+.divider {
+    top: 200px;
+    left: 384px;
+}
+.cardday {
+    top: 200px;
+    left: 392px;
+    letter-spacing: 5px;
+}
+.cardcvc {
+    position: absolute;
+   right: 60px;
+   letter-spacing: 5px;
+   bottom: 117px;
+}
+form {
+    height: 350px;
+}
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+label.cardnumber,label.cardholdername, label.cardname, label.cardexpiry, .cardCvc {
+    margin-top: 30px;
+
+}
+input {
+    outline: 0 solid hsl(278, 94%, 30%);
+    width: 350px;
+    padding: 10px 10px;
+    border: 1px solid hsl(279, 6%, 55%);
+    cursor: pointer;
+}
+input::placeholder{
+    font-weight: 300;
+}
+.thankuhidden {
+    display: none;
+}
+#errorMsg, #errorCardN, #errorexpiry, #errorCVC {
+    color:hsl(0, 0%, 100%) ;
+    font-size: 12px;
+    font-weight: 500;
+    padding-left: 2px;
+    padding-top: 2px;
+
+
+}
+#errorexpiry, #errorCVC{
+    letter-spacing: 2px;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 40px;
+
+}
+.flex, .expiry1, .expiry2, .flex .CVC, .cardholder-name, .expiry {
+    border-radius: 5px;
+    height: 36px;
+    border: 1px thick;
+    margin-top: 4px;
+}
+.cardholder-name, .expiry {
+    width: 278px;
+}
+.flex .expiry1 {
+    width: 60px;
+    margin-right: 5px;
+
+}
+.flex .expiry2 {
+    width: 60px;
+    margin-right: 5px;
+
+}
+.flex .CVC {
+    width: 90px;
+
+}
+.card-details {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+button{
+    all: unset;
+    text-align: center;
+    border: 1px solid black;
+    margin-top: 40px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px 0;
+    font-size: 16px;
+    background-color: hsl(278, 68%, 11%);
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    transition: background-color 0.2s ease-in;
+}
+button:hover {
+    background-color: hsl(278, 68%, 11%,0.6);
+
+}
+@media screen and (max-width:1024px) {
+    .card-front{left: 75px;}
+    .card-back{
+        left: 140px;
+    }
+    
+}
+@media screen and (max-width:768px) {
+    body {
+        flex-direction: column;
+
+    }
+    .container {
+        flex-direction: column;
+
+    }
+    .bg-img{display: none;}
+    .bg-imgm{display: block;position: absolute;
+        top: 0;
+    width: 120%;
+height: 300px;}
+.card-front{
+    width: 520px;
+    top: 140px;
+    z-index: 5;
+    left: 220px;
+    
+}
+.card-back{
+    width: 500px;
+    top: 20px;
+    left: 270px;
+}
+.card-back-img, .card-front-img {
+    max-width: 400px;
+    width: 100%;
+}
+.cardcvc {
+    top: 97px;
+    bottom: 0px;
+    right: 165px;
+}
+.cardow {
+    top: 190px;
+}
+.card-details{
+    top: 30px;
+    position: relative;
+    flex: 0 1 50%;
+} 
+.cardmonth {
+    top: 190px;
+    left: 330px;
+    letter-spacing: 5px;
+}
+.divider {
+    top: 190px;
+    left: 354px;
+}
+.cardday {
+    top: 190px;
+    left: 362px;
+    letter-spacing: 5px;
+}
+}
